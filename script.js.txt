@@ -1,0 +1,10 @@
+function bookTicket(){
+
+let name = document.getElementById("name").value;
+let movie = document.getElementById("movie").value;
+let time = document.getElementById("time").value;
+
+document.getElementById("result").innerHTML =
+"Ticket booked for " + name + " | Movie: " + movie + " | Time: " + time;
+
+}

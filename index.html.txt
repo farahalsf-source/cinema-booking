@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cinema Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Cinema Ticket Booking</h1>
+
+<h2>Select Movie</h2>
+
+<select id="movie">
+<option>Avengers</option>
+<option>Spider Man</option>
+<option>Batman</option>
+</select>
+
+<h2>Select Time</h2>
+
+<select id="time">
+<option>3:00 PM</option>
+<option>6:00 PM</option>
+<option>9:00 PM</option>
+</select>
+
+<h2>Your Name</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<br><br>
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+<p id="result"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>

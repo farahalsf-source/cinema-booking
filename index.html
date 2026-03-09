@@ -2,14 +2,132 @@
 <html>
 <head>
 <title>Cinema Booking</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#111;
+color:white;
+text-align:center;
+}
+
+header{
+background:#c1121f;
+padding:20px;
+}
+
+.movies{
+padding:30px;
+}
+
+.movie-list{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.movie img{
+width:150px;
+border-radius:10px;
+}
+
+.booking{
+background:#1d3557;
+padding:30px;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+button{
+background:#e63946;
+color:white;
+border:none;
+padding:12px 25px;
+cursor:pointer;
+}
+
+.contact{
+padding:30px;
+background:#000;
+}
+
+</style>
+
+<script>
+
+function bookTicket(){
+
+let name = document.getElementById("name").value;
+let movie = document.getElementById("movie").value;
+let time = document.getElementById("time").value;
+
+document.getElementById("result").innerHTML =
+"Ticket booked for " + name + " | Movie: " + movie + " | Time: " + time;
+
+}
+
+</script>
+
 </head>
 
 <body>
 
-<h1>Cinema Ticket Booking</h1>
+<header>
+<h1>🎬 Cinema Ticket Booking</h1>
+<p>Book your movie tickets online</p>
+</header>
 
-<h2>Select Movie</h2>
+<section class="movies">
+
+<h2>Now Showing</h2>
+
+<div class="movie-list">
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg">
+<h3>Avengers</h3>
+<p>⭐ Rating: 4.5</p>
+</div>
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/71niXI3lxlL.jpg">
+<h3>Spider Man</h3>
+<p>⭐ Rating: 4.3</p>
+</div>
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg">
+<h3>Batman</h3>
+<p>⭐ Rating: 4.6</p>
+</div>
+
+</div>
+
+</section>
+
+<h2>🎥 Movie Trailer</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/eOrNdBpGMv8"
+title="Movie Trailer"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+<section class="booking">
+
+<h2>Book Your Ticket</h2>
+
+<label>Select Movie</label>
+<br>
 
 <select id="movie">
 <option>Avengers</option>
@@ -17,7 +135,10 @@
 <option>Batman</option>
 </select>
 
-<h2>Select Time</h2>
+<br>
+
+<label>Select Time</label>
+<br>
 
 <select id="time">
 <option>3:00 PM</option>
@@ -25,9 +146,42 @@
 <option>9:00 PM</option>
 </select>
 
-<h2>Your Name</h2>
+<br>
+
+<h3>Select Seat</h3>
+
+<select>
+<option>A1</option>
+<option>A2</option>
+<option>A3</option>
+<option>B1</option>
+<option>B2</option>
+</select>
+
+<br>
+
+<label>Your Name</label>
+<br>
 
 <input type="text" id="name" placeholder="Enter your name">
+
+<br>
+
+<label>Snacks</label>
+<br>
+
+<select>
+<option>Popcorn</option>
+<option>Nachos</option>
+<option>Soft Drink</option>
+</select>
+
+<br>
+
+<label>Notes</label>
+<br>
+
+<textarea placeholder="Any notes..."></textarea>
 
 <br><br>
 
@@ -35,8 +189,25 @@
 
 <p id="result"></p>
 
-<script src="script.js"></script>
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Location: Riyadh Cinema Mall</p>
+<p>☎️ Phone: +966 500000000</p>
+
+<h3>Our Location</h3>
+
+<iframe
+src="https://www.google.com/maps?q=riyadh&output=embed"
+width="400"
+height="300"
+style="border:0;">
+</iframe>
+
+</section>
 
 </body>
-
 </html>

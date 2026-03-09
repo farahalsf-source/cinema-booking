@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Book Ticket</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+text-align:center;
+}
+
+header{
+padding:60px;
+background:linear-gradient(90deg,#ff512f,#dd2476);
+}
+
+.menu{
+background:#111;
+padding:15px;
+}
+
+.menu a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.booking{
+padding:60px;
+}
+
+select,input{
+padding:12px;
+margin:12px;
+width:250px;
+border-radius:8px;
+border:none;
+}
+
+button{
+background:#ff512f;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:8px;
+}
+
+</style>
+
+<script>
+
+function bookTicket(){
+
+let name=document.getElementById("name").value;
+let movie=document.getElementById("movie").value;
+
+document.getElementById("result").innerHTML=
+"🎟 Ticket booked for "+name+" | Movie: "+movie;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🎟 Book Ticket</h1>
+
+</header>
+
+<nav class="menu">
+
+<a href="index.html">Movies</a>
+<a href="booking.html">Book Ticket</a>
+<a href="snacks.html">Snacks</a>
+<a href="location.html">Location</a>
+
+</nav>
+
+<section class="booking">
+
+<select id="movie">
+
+<option>Spider-Man</option>
+<option>Batman</option>
+<option>Frozen</option>
+<option>Toy Story</option>
+<option>Minions</option>
+<option>Finding Nemo</option>
+<option>Cars</option>
+<option>Lion King</option>
+<option>Encanto</option>
+
+</select>
+
+<br>
+
+<select>
+
+<option>3:00 PM</option>
+<option>6:00 PM</option>
+<option>9:00 PM</option>
+
+</select>
+
+<br>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<br>
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+<p id="result"></p>
+
+</section>
+
+</body>
+</html>
 

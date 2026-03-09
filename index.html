@@ -25,6 +25,25 @@ font-size:45px;
 margin:0;
 }
 
+/* MENU */
+
+.menu{
+background:#111;
+padding:15px;
+}
+
+.menu a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#ff512f;
+}
+
 /* MOVIES */
 
 .movies{
@@ -55,7 +74,7 @@ width:100%;
 border-radius:10px;
 }
 
-/* BOOKING SECTION */
+/* BOOKING */
 
 .booking{
 background:#16213e;
@@ -91,6 +110,27 @@ transition:0.3s;
 
 button:hover{
 transform:scale(1.05);
+}
+
+/* SNACKS */
+
+.snacks{
+padding:40px;
+background:#1c2541;
+}
+
+.snack-list{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.snack{
+background:#0b132b;
+padding:20px;
+border-radius:10px;
+width:150px;
 }
 
 /* CONTACT */
@@ -131,7 +171,16 @@ document.getElementById("result").innerHTML =
 <p>Book your favorite movies online</p>
 </header>
 
-<section class="movies">
+<nav class="menu">
+
+<a href="#movies">🎬 Movies</a>
+<a href="#booking">🎟 Book Ticket</a>
+<a href="#snacks">🍿 Snacks</a>
+<a href="#location">📍 Location</a>
+
+</nav>
+
+<section class="movies" id="movies">
 
 <h2>Now Showing</h2>
 
@@ -140,55 +189,46 @@ document.getElementById("result").innerHTML =
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg">
 <h3>Spider-Man</h3>
-<p>⭐ 4.5</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg">
 <h3>Batman</h3>
-<p>⭐ 4.4</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg">
 <h3>Frozen</h3>
-<p>⭐ 4.6</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg">
 <h3>Toy Story</h3>
-<p>⭐ 4.7</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/vlOgaxUiMOA8sPDG9n3VhQabnEi.jpg">
 <h3>Minions</h3>
-<p>⭐ 4.3</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg">
 <h3>Finding Nemo</h3>
-<p>⭐ 4.6</p>
 </div>
 
 <div class="movie">
 <img src="https://upload.wikimedia.org/wikipedia/en/3/34/Cars_2006.jpg">
 <h3>Cars</h3>
-<p>⭐ 4.5</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg">
 <h3>Lion King</h3>
-<p>⭐ 4.6</p>
 </div>
 
 <div class="movie">
 <img src="https://image.tmdb.org/t/p/w500/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg">
 <h3>Encanto</h3>
-<p>⭐ 4.5</p>
 </div>
 
 </div>
@@ -203,7 +243,7 @@ frameborder="0"
 allowfullscreen>
 </iframe>
 
-<section class="booking">
+<section class="booking" id="booking">
 
 <h2>Book Your Ticket</h2>
 
@@ -229,30 +269,7 @@ allowfullscreen>
 
 <br>
 
-<select>
-<option>Seat A1</option>
-<option>Seat A2</option>
-<option>Seat A3</option>
-<option>Seat B1</option>
-<option>Seat B2</option>
-</select>
-
-<br>
-
 <input type="text" id="name" placeholder="Enter your name">
-
-<br>
-
-<select>
-<option>🍿 Popcorn</option>
-<option>🥤 Soft Drink</option>
-<option>🌮 Nachos</option>
-<option>🍫 Chocolate</option>
-</select>
-
-<br>
-
-<textarea placeholder="Notes"></textarea>
 
 <br><br>
 
@@ -262,7 +279,22 @@ allowfullscreen>
 
 </section>
 
-<section class="contact">
+<section class="snacks" id="snacks">
+
+<h2>🍿 Snacks</h2>
+
+<div class="snack-list">
+
+<div class="snack">🍿 Popcorn</div>
+<div class="snack">🥤 Soft Drink</div>
+<div class="snack">🌮 Nachos</div>
+<div class="snack">🍫 Chocolate</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="location">
 
 <h2>Contact Us</h2>
 

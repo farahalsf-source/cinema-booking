@@ -8,16 +8,31 @@
 body{
 font-family: Arial;
 margin:0;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
 text-align:center;
 }
 
+/* HEADER */
+
 header{
-background:#e50914;
-padding:25px;
-font-size:22px;
+padding:60px 20px;
+background:linear-gradient(90deg,#ff512f,#dd2476);
 }
+
+header h1{
+font-size:45px;
+letter-spacing:2px;
+margin:0;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+/* MOVIES */
 
 .movies{
 padding:40px;
@@ -47,6 +62,8 @@ width:100%;
 border-radius:10px;
 }
 
+/* BOOKING */
+
 .booking{
 background:#16213e;
 padding:40px;
@@ -63,7 +80,7 @@ border:none;
 }
 
 button{
-background:#e50914;
+background:#ff512f;
 color:white;
 border:none;
 padding:12px 30px;
@@ -73,8 +90,10 @@ cursor:pointer;
 }
 
 button:hover{
-background:#ff2e2e;
+background:#ff7b54;
 }
+
+/* CONTACT */
 
 .contact{
 padding:40px;
@@ -103,8 +122,10 @@ document.getElementById("result").innerHTML =
 <body>
 
 <header>
-<h1>🎬 Cinema Ticket Booking</h1>
-<p>Choose your favorite movie and book your ticket</p>
+
+<h1>🎬 Cinematic Booking</h1>
+<p>Book your favorite movies online</p>
+
 </header>
 
 <section class="movies">
@@ -180,7 +201,7 @@ document.getElementById("result").innerHTML =
 <h2>🎥 Movie Trailer</h2>
 
 <iframe width="560" height="315"
-src="https://www.youtube.com/embed/TcMBFSGVi1c"
+src="https://www.youtube.com/embed/LKFuXETZUsI"
 frameborder="0"
 allowfullscreen>
 </iframe>

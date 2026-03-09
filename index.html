@@ -8,34 +8,48 @@
 body{
 font-family: Arial;
 margin:0;
-background:#111;
+background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
 text-align:center;
 }
 
 header{
-background:#c1121f;
-padding:20px;
+background:#e50914;
+padding:25px;
+font-size:22px;
 }
 
 .movies{
-padding:30px;
+padding:40px;
 }
 
 .movie-list{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:30px;
 }
 
+.movie{
+background:#1c1c1c;
+padding:15px;
+border-radius:10px;
+width:180px;
+transition:0.3s;
+}
+
+.movie:hover{
+transform:scale(1.1);
+}
+
 .movie img{
-width:150px;
+width:100%;
 border-radius:10px;
 }
 
 .booking{
-background:#1d3557;
-padding:30px;
+background:#16213e;
+padding:40px;
 }
 
 .booking input,
@@ -44,19 +58,27 @@ padding:30px;
 padding:10px;
 margin:10px;
 width:250px;
+border-radius:5px;
+border:none;
 }
 
 button{
-background:#e63946;
+background:#e50914;
 color:white;
 border:none;
-padding:12px 25px;
+padding:12px 30px;
+font-size:16px;
+border-radius:5px;
 cursor:pointer;
 }
 
+button:hover{
+background:#ff2e2e;
+}
+
 .contact{
-padding:30px;
-background:#000;
+padding:40px;
+background:#0f3460;
 }
 
 </style>
@@ -70,7 +92,7 @@ let movie = document.getElementById("movie").value;
 let time = document.getElementById("time").value;
 
 document.getElementById("result").innerHTML =
-"Ticket booked for " + name + " | Movie: " + movie + " | Time: " + time;
+"✅ Ticket booked for " + name + " | Movie: " + movie + " | Time: " + time;
 
 }
 
@@ -82,7 +104,7 @@ document.getElementById("result").innerHTML =
 
 <header>
 <h1>🎬 Cinema Ticket Booking</h1>
-<p>Book your movie tickets online</p>
+<p>Book your favorite movies online</p>
 </header>
 
 <section class="movies">
@@ -94,19 +116,37 @@ document.getElementById("result").innerHTML =
 <div class="movie">
 <img src="https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg">
 <h3>Avengers</h3>
-<p>⭐ Rating: 4.5</p>
+<p>⭐ 4.5 Rating</p>
 </div>
 
 <div class="movie">
 <img src="https://m.media-amazon.com/images/I/71niXI3lxlL.jpg">
-<h3>Spider Man</h3>
-<p>⭐ Rating: 4.3</p>
+<h3>Spider-Man</h3>
+<p>⭐ 4.3 Rating</p>
 </div>
 
 <div class="movie">
 <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg">
 <h3>Batman</h3>
-<p>⭐ Rating: 4.6</p>
+<p>⭐ 4.6 Rating</p>
+</div>
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/91zDWY3qQfL.jpg">
+<h3>Interstellar</h3>
+<p>⭐ 4.8 Rating</p>
+</div>
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/81AJdOIEI0L.jpg">
+<h3>Joker</h3>
+<p>⭐ 4.7 Rating</p>
+</div>
+
+<div class="movie">
+<img src="https://m.media-amazon.com/images/I/71c05lTE03L.jpg">
+<h3>Fast & Furious</h3>
+<p>⭐ 4.2 Rating</p>
 </div>
 
 </div>
@@ -117,7 +157,6 @@ document.getElementById("result").innerHTML =
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/eOrNdBpGMv8"
-title="Movie Trailer"
 frameborder="0"
 allowfullscreen>
 </iframe>
@@ -126,18 +165,14 @@ allowfullscreen>
 
 <h2>Book Your Ticket</h2>
 
-<label>Select Movie</label>
-<br>
-
 <select id="movie">
 <option>Avengers</option>
-<option>Spider Man</option>
+<option>Spider-Man</option>
 <option>Batman</option>
+<option>Interstellar</option>
+<option>Joker</option>
 </select>
 
-<br>
-
-<label>Select Time</label>
 <br>
 
 <select id="time">
@@ -148,40 +183,29 @@ allowfullscreen>
 
 <br>
 
-<h3>Select Seat</h3>
-
 <select>
-<option>A1</option>
-<option>A2</option>
-<option>A3</option>
-<option>B1</option>
-<option>B2</option>
+<option>Seat A1</option>
+<option>Seat A2</option>
+<option>Seat A3</option>
+<option>Seat B1</option>
+<option>Seat B2</option>
 </select>
 
-<br>
-
-<label>Your Name</label>
 <br>
 
 <input type="text" id="name" placeholder="Enter your name">
 
 <br>
 
-<label>Snacks</label>
-<br>
-
 <select>
-<option>Popcorn</option>
-<option>Nachos</option>
-<option>Soft Drink</option>
+<option>🍿 Popcorn</option>
+<option>🥤 Soft Drink</option>
+<option>🌮 Nachos</option>
 </select>
 
 <br>
 
-<label>Notes</label>
-<br>
-
-<textarea placeholder="Any notes..."></textarea>
+<textarea placeholder="Notes"></textarea>
 
 <br><br>
 
@@ -195,10 +219,10 @@ allowfullscreen>
 
 <h2>Contact Us</h2>
 
-<p>📍 Location: Riyadh Cinema Mall</p>
-<p>☎️ Phone: +966 500000000</p>
+<p>📍 Riyadh Cinema Mall</p>
+<p>☎️ +966500000000</p>
 
-<h3>Our Location</h3>
+<h3>Location</h3>
 
 <iframe
 src="https://www.google.com/maps?q=riyadh&output=embed"

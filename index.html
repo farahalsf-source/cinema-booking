@@ -8,7 +8,7 @@
 body{
 font-family: Arial;
 margin:0;
-background:linear-gradient(135deg,#141e30,#243b55);
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
 }
@@ -27,13 +27,13 @@ padding:40px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:30px;
+gap:25px;
 }
 
 .movie{
 background:#1c1c1c;
 padding:15px;
-border-radius:10px;
+border-radius:12px;
 width:180px;
 transition:0.3s;
 }
@@ -58,7 +58,7 @@ padding:40px;
 padding:10px;
 margin:10px;
 width:250px;
-border-radius:5px;
+border-radius:6px;
 border:none;
 }
 
@@ -68,7 +68,7 @@ color:white;
 border:none;
 padding:12px 30px;
 font-size:16px;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
 }
 
@@ -104,7 +104,7 @@ document.getElementById("result").innerHTML =
 
 <header>
 <h1>🎬 Cinema Ticket Booking</h1>
-<p>Book your favorite movies online</p>
+<p>Choose your favorite movie and book your ticket</p>
 </header>
 
 <section class="movies">
@@ -114,39 +114,63 @@ document.getElementById("result").innerHTML =
 <div class="movie-list">
 
 <div class="movie">
-<img src="https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg">
-<h3>Avengers</h3>
-<p>⭐ 4.5 Rating</p>
-</div>
-
-<div class="movie">
-<img src="https://m.media-amazon.com/images/I/71niXI3lxlL.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Spidermanhomecomingposter.jpg">
 <h3>Spider-Man</h3>
-<p>⭐ 4.3 Rating</p>
+<p>⭐ 4.5</p>
 </div>
 
 <div class="movie">
-<img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/en/1/17/Batman-Begins-Poster.jpg">
 <h3>Batman</h3>
-<p>⭐ 4.6 Rating</p>
+<p>⭐ 4.4</p>
 </div>
 
 <div class="movie">
-<img src="https://m.media-amazon.com/images/I/91zDWY3qQfL.jpg">
-<h3>Interstellar</h3>
-<p>⭐ 4.8 Rating</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg">
+<h3>Frozen</h3>
+<p>⭐ 4.6</p>
 </div>
 
 <div class="movie">
-<img src="https://m.media-amazon.com/images/I/81AJdOIEI0L.jpg">
-<h3>Joker</h3>
-<p>⭐ 4.7 Rating</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg">
+<h3>Toy Story</h3>
+<p>⭐ 4.7</p>
 </div>
 
 <div class="movie">
-<img src="https://m.media-amazon.com/images/I/71c05lTE03L.jpg">
-<h3>Fast & Furious</h3>
-<p>⭐ 4.2 Rating</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Minions_poster.jpg">
+<h3>Minions</h3>
+<p>⭐ 4.3</p>
+</div>
+
+<div class="movie">
+<img src="https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg">
+<h3>Finding Nemo</h3>
+<p>⭐ 4.6</p>
+</div>
+
+<div class="movie">
+<img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Moana_%282016_film_poster%29.jpg">
+<h3>Moana</h3>
+<p>⭐ 4.5</p>
+</div>
+
+<div class="movie">
+<img src="https://upload.wikimedia.org/wikipedia/en/4/44/Zootopia.jpg">
+<h3>Zootopia</h3>
+<p>⭐ 4.4</p>
+</div>
+
+<div class="movie">
+<img src="https://upload.wikimedia.org/wikipedia/en/6/69/The_Lion_King_2019_poster.jpg">
+<h3>Lion King</h3>
+<p>⭐ 4.6</p>
+</div>
+
+<div class="movie">
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Encanto_poster.jpg">
+<h3>Encanto</h3>
+<p>⭐ 4.5</p>
 </div>
 
 </div>
@@ -156,7 +180,7 @@ document.getElementById("result").innerHTML =
 <h2>🎥 Movie Trailer</h2>
 
 <iframe width="560" height="315"
-src="https://www.youtube.com/embed/eOrNdBpGMv8"
+src="https://www.youtube.com/embed/TcMBFSGVi1c"
 frameborder="0"
 allowfullscreen>
 </iframe>
@@ -166,11 +190,16 @@ allowfullscreen>
 <h2>Book Your Ticket</h2>
 
 <select id="movie">
-<option>Avengers</option>
 <option>Spider-Man</option>
 <option>Batman</option>
-<option>Interstellar</option>
-<option>Joker</option>
+<option>Frozen</option>
+<option>Toy Story</option>
+<option>Minions</option>
+<option>Finding Nemo</option>
+<option>Moana</option>
+<option>Zootopia</option>
+<option>Lion King</option>
+<option>Encanto</option>
 </select>
 
 <br>
@@ -189,6 +218,8 @@ allowfullscreen>
 <option>Seat A3</option>
 <option>Seat B1</option>
 <option>Seat B2</option>
+<option>Seat C1</option>
+<option>Seat C2</option>
 </select>
 
 <br>
@@ -201,6 +232,7 @@ allowfullscreen>
 <option>🍿 Popcorn</option>
 <option>🥤 Soft Drink</option>
 <option>🌮 Nachos</option>
+<option>🍫 Chocolate</option>
 </select>
 
 <br>

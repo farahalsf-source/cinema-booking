@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cinema Booking</title>
+
+<title>Cinema Booking - Movies</title>
 
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
 text-align:center;
 }
 
-/* HEADER */
-
 header{
-padding:60px 20px;
+padding:60px;
 background:linear-gradient(90deg,#ff512f,#dd2476);
 }
-
-header h1{
-font-size:45px;
-margin:0;
-}
-
-/* MENU */
 
 .menu{
 background:#111;
@@ -34,7 +26,7 @@ padding:15px;
 
 .menu a{
 color:white;
-margin:15px;
+margin:20px;
 text-decoration:none;
 font-size:18px;
 font-weight:bold;
@@ -43,8 +35,6 @@ font-weight:bold;
 .menu a:hover{
 color:#ff512f;
 }
-
-/* MOVIES */
 
 .movies{
 padding:40px;
@@ -62,11 +52,6 @@ background:#1c1c1c;
 padding:15px;
 border-radius:12px;
 width:180px;
-transition:0.3s;
-}
-
-.movie:hover{
-transform:scale(1.1);
 }
 
 .movie img{
@@ -74,113 +59,29 @@ width:100%;
 border-radius:10px;
 }
 
-/* BOOKING */
-
-.booking{
-background:#16213e;
-padding:50px;
-}
-
-.booking input,
-.booking select,
-.booking textarea{
-padding:12px;
-margin:12px;
-width:260px;
-border-radius:8px;
-border:none;
-background:white;
-color:#333;
-font-size:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* BUTTON */
-
-button{
-background:linear-gradient(90deg,#ff512f,#dd2476);
-color:white;
-border:none;
-padding:14px 35px;
-font-size:16px;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-}
-
-/* SNACKS */
-
-.snacks{
-padding:40px;
-background:#1c2541;
-}
-
-.snack-list{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.snack{
-background:#0b132b;
-padding:20px;
-border-radius:10px;
-width:150px;
-}
-
-/* CONTACT */
-
-.contact{
-padding:40px;
-background:#0f3460;
-}
-
-iframe{
-border-radius:12px;
-margin-top:15px;
-}
-
 </style>
-
-<script>
-
-function bookTicket(){
-
-let name = document.getElementById("name").value;
-let movie = document.getElementById("movie").value;
-let time = document.getElementById("time").value;
-
-document.getElementById("result").innerHTML =
-"🎟 Ticket booked for " + name + " | Movie: " + movie + " | Time: " + time;
-
-}
-
-</script>
 
 </head>
 
 <body>
 
 <header>
+
 <h1>🎬 Cinematic Booking</h1>
 <p>Book your favorite movies online</p>
+
 </header>
 
 <nav class="menu">
 
-<a href="#movies">🎬 Movies</a>
-<a href="#booking">🎟 Book Ticket</a>
-<a href="#snacks">🍿 Snacks</a>
-<a href="#location">📍 Location</a>
+<a href="index.html">🎬 Movies</a>
+<a href="booking.html">🎟 Book Ticket</a>
+<a href="snacks.html">🍿 Snacks</a>
+<a href="location.html">📍 Location</a>
 
 </nav>
 
-<section class="movies" id="movies">
+<section class="movies">
 
 <h2>Now Showing</h2>
 
@@ -232,82 +133,6 @@ document.getElementById("result").innerHTML =
 </div>
 
 </div>
-
-</section>
-
-<h2>🎥 Movie Trailer</h2>
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/LKFuXETZUsI"
-frameborder="0"
-allowfullscreen>
-</iframe>
-
-<section class="booking" id="booking">
-
-<h2>Book Your Ticket</h2>
-
-<select id="movie">
-<option>Spider-Man</option>
-<option>Batman</option>
-<option>Frozen</option>
-<option>Toy Story</option>
-<option>Minions</option>
-<option>Finding Nemo</option>
-<option>Cars</option>
-<option>Lion King</option>
-<option>Encanto</option>
-</select>
-
-<br>
-
-<select id="time">
-<option>3:00 PM</option>
-<option>6:00 PM</option>
-<option>9:00 PM</option>
-</select>
-
-<br>
-
-<input type="text" id="name" placeholder="Enter your name">
-
-<br><br>
-
-<button onclick="bookTicket()">Book Ticket</button>
-
-<p id="result"></p>
-
-</section>
-
-<section class="snacks" id="snacks">
-
-<h2>🍿 Snacks</h2>
-
-<div class="snack-list">
-
-<div class="snack">🍿 Popcorn</div>
-<div class="snack">🥤 Soft Drink</div>
-<div class="snack">🌮 Nachos</div>
-<div class="snack">🍫 Chocolate</div>
-
-</div>
-
-</section>
-
-<section class="contact" id="location">
-
-<h2>Contact Us</h2>
-
-<p>📍 Riyadh Cinema Mall</p>
-<p>☎️ +966500000000</p>
-
-<h3>Our Location</h3>
-
-<iframe
-src="https://www.google.com/maps?q=riyadh&output=embed"
-width="400"
-height="300">
-</iframe>
 
 </section>
 
